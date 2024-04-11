@@ -1,0 +1,54 @@
+<section id="contact">
+    <p class="heading text-center color-white">Contact</p>
+    <footer id="footer" class="footer">
+        <div class="container pb-5" id="contact">
+            <div class="row">
+                <div class="col-md-7 mx-auto">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="contactForm" name="contactForm" action="" method="POST" class="form">
+                                <div class="form__inner">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="email-input">Email:</label>
+                                                <input [(ngModel)]="emailAddy" name="email-input" type="email" class="form-control" required id="email-input" placeholder="Enter email address here" disabled="{{isLoading}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea name="message" class="form-control" rows="5" id="message" [(ngModel)]="message" placeholder="Please provide a brief description of your idea" disabled="{{isLoading}}"></textarea>
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <button *ngIf="!isLoading; else loadingDots" type="submit" class="btn btn-primary" (click)="sendEmail()">Send</button>
+                                        <ng-template #loadingDots>
+                                            <div class="spinner-border text-success" role="status">
+                                                <span class="sr-only">Loading...</span>
+                                            </div>
+                                        </ng-template>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <nav>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item">
+                        <a href="https://www.linkedin.com/in/elteetaiwo/" class="footer__menu-link" target="_blank">LinkedIn</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="mailto:eltee.taiwo@gmail.com" class="footer__menu-link">Email</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="https://github.com/eltee-taiwo" class="footer__menu-link" target="_blank">GitHub</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</section>

@@ -1,0 +1,42 @@
+<hr />
+<section id="skills" class="section" data-spy="scroll" data-target="#menu">
+  <p class="heading text-center">Skills</p>
+  <div class="col-sm-12">
+    <div class="container section pt-0">
+      <div class="text-center">
+        <p class="text-center">
+          As a system developer, I have the skills to design, create, and
+          maintain a variety of systems that range from websites mobile apps.
+        </p>
+        <p>
+          My experience in these fields go from analysing requirements &
+          building systems to meet your needs, writing & testing code,
+          collaborating with multi-dimensional teams, and continous learning to
+          keep up to date with industry trends.
+        </p>
+      </div>
+      <ng-image-slider
+        [images]="carouselItems"
+        [imagePopup]="false"
+        [infinite]="true"
+        [imageSize]="{ width: '275', height: '285', space: 30 }"
+        [animationSpeed]="0.5"
+        #nav
+      >
+      </ng-image-slider>
+      <a
+        href="https://instagram.com/roses_artpage"
+        target="_blank"
+        class="roseTag"
+      >
+        Art by Rose
+      </a>
+    </div>
+  </div>
+
+  <div class="text-center" style="margin-top: 30px; margin-bottom: 30px">
+    <a href="#portfolio" class="btn btn-outline-primary"
+      >What I've done with them</a
+    >
+  </div>
+</section>

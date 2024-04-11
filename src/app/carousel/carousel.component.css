@@ -1,0 +1,122 @@
+.wrapper {
+    z-index: 0;
+}
+
+img {
+    display: block;
+    box-shadow: 9px 8px #e0dbdb;
+    width: 80%;
+    /* align-self: center; */
+    margin: 0 auto;
+}
+
+li>h3 {
+    text-align: center;
+}
+
+div>ul {
+    align-items: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: grey; */
+}
+
+.left-chevron {
+    transition: .15s ease-in opacity;
+    /* position: absolute; */
+    right: 0;
+    /* -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%); */
+    transform: translateY(-50%);
+    top: 45%;
+    left: 100%;
+    width: 40px;
+    height: 40px;
+    background: 0 0;
+    padding: 10px;
+    border: none;
+    background: url(src/assets/left-chevron.svg);
+    background-size: contain;
+    opacity: .2;
+    background-size: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.left-chevron:hover,
+.right-chevron:hover {
+    opacity: 1;
+}
+
+.right-chevron {
+    transition: .15s ease-in opacity;
+    /* position: absolute; */
+    right: 0;
+    /* -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%); */
+    transform: translateY(-50%);
+    top: 45%;
+    left: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background: 0 0;
+    border: none;
+    background: url(src/assets/right-chevron.svg);
+    background-size: contain;
+    opacity: .2;
+    background-size: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.btn-outline-primary {
+    color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    /* color: rgba(0,0,0,.6); */
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn:active:focus {
+    color: #fff;
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    box-shadow: 0 0 0 0.2rem rgba(91, 67, 214, .5);
+}
+
+.btn:hover {
+    color: #ececec;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3a25a8;
+    text-decoration: underline;
+}
+
+.roseTag {
+    color: var(--dark-green);
+    float: right;
+}
+
+a.next.icons.next-icon, a.prev.icons.prev-icon {
+    outline-style: groove;
+    outline-color: var(--links-color);
+    outline-width: 1px;
+}
