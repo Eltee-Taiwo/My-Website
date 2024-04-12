@@ -4,7 +4,6 @@ import { ToastrService } from 'ngx-toastr';
 
 class ContactFormPost {
   EmailAddress: string;
-  Plan: string;
   Message: string;
 }
 
@@ -22,7 +21,6 @@ export class EmailFormComponent implements OnInit {
   emailRegex = new RegExp(`^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$`);
   isLoading = false;
   emailAddy = '';
-  selectedPlan = '';
   message = '';
 
   ngOnInit(): void {
@@ -44,7 +42,6 @@ export class EmailFormComponent implements OnInit {
 
     const contactPost: ContactFormPost = {
       EmailAddress: this.emailAddy,
-      Plan: this.selectedPlan,
       Message: this.message
     };
 
@@ -52,13 +49,12 @@ export class EmailFormComponent implements OnInit {
     .set('Content-Type', 'application/json');
 
     this.httpClient.post<any>(
-      '/api/eltee/Contact',
+      '/api/Contact',
       contactPost,
       {headers}
     ).subscribe({
       next: data => {
         this.emailAddy = '';
-        this.selectedPlan = '';
         this.message = '';
         this.toastr.success('I\'ll get back to you in less than 24 hours.', 'Thanks for reaching out!');
         this.isLoading = false;
