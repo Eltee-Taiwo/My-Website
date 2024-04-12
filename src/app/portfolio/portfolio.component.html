@@ -1,0 +1,30 @@
+<hr>
+<section id="portfolio" class="section" data-spy="scroll" data-target="#menu">
+    <p class="heading text-center">Portfolio</p>
+    <div *ngFor="let item of portfolioData; let i = index">
+        <div class="container portfolio-item" [class.first]="i === 0">
+            <div class="row align-items-center h-100 text-center text-lg-left">
+                <div class="col-lg-6 p-lg-0 ">
+                    <img [src]="item.image" alt="">
+                </div>
+                <div class="col-lg-5 mx-auto py-3">
+                    <h3 class="h3">{{item.name}} <span class="badge badge-primary badge-sm">{{item.date}}</span><span
+                              class="badge badge-secondary badge-sm">{{item.category}}</span></h3>
+                    <p class="showcase__description mb-4 color-gray">{{item.description}}.</p>
+                    <div *ngIf="item.type == PortfolioType.MobileApp; else isWebsite" class="app-download-icons">
+                        <a [href]="item.androidLink" target="_blank">
+                            <img alt='Get it on Google Play' src='../../assets/Google-Download.png' />
+                        </a>
+                        <a [href]="item.iosLink" target="_blank">
+                            <img alt="Download on the App Store" src="../../assets/Apple-Download.png" />
+                        </a>
+                    </div>
+                    <ng-template #isWebsite>
+                        <a [href]="item.url" class="btn btn-outline-primary" target="_blank">Visit site</a>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</section>

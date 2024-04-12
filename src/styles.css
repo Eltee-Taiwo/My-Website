@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --light-green: #05b43f;
+    --dark-green: #057e2d;
+    --links-color: #F80670;
+    --gold: #f2cf00;
+    --dark-gold: #968000;
+    --pricing-basic: #FF8606;
+    --pricing-standard: #FF2D06;
+    --pricing-premium: #0EB7EF;
+    --heading-grey: #A9A9A9;
+}
+
+a {
+    color: var(--links-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section:not(#hero) {
+    padding-top: 135px;
+    padding-bottom: 70px;
+}
+
+.heading {
+    color: var(--heading-grey);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+}
+
+body {
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--light-green);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--gold);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--dark-gold);
+}

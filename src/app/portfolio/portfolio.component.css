@@ -1,0 +1,123 @@
+hr {
+    margin: 0;
+    padding: 0;
+    border-color: #d6d6d6;
+}
+
+.portfolio-item.first {
+    padding-top: 0;
+}
+
+
+/* .repeater-wrapper { margin-bottom: 20px;} */
+
+img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    border: solid #EFEFEF 1px;
+}
+
+
+/* .h2.pre,
+h2.pre {
+    color: #a9a9a9;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+} */
+
+.text-center {
+    text-align: center!important;
+}
+
+.container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+/* BADGE */
+
+.badge-sm {
+    font-size: 12px !important;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.badge-primary {
+    color: #fff;
+    background-color: var(--dark-green);
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+/* BUTTONS */
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--light-green);
+}
+
+.btn-outline-primary {
+    color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    /* color: rgba(0,0,0,.6); */
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: var(--light-green);
+    ;
+    border-color: var(--dark-green);
+}
+
+.btn:active:focus {
+    color: #fff;
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    box-shadow: 0 0 0 0.2rem var(--gold);
+}
+
+.btn:hover {
+    color: #ececec;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--light-green);
+    ;
+    text-decoration: underline;
+}
+
+
+/* Download Icons */
+.app-download-icons img{
+    border: none;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "route": "/.well-known/*",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  ],
+  "mimeTypes": {
+    ".json": "application/json"
+  },
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*", "/styles/*", "/.well-known/*"]
+  }
+}

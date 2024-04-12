@@ -1,0 +1,65 @@
+<nav
+  class="header"
+  id="menu"
+  [ngClass]="{
+    'header--fixed': scrollPageLevel == 0,
+    'header--scrolling': scrollPageLevel > 0
+  }"
+  (scroll)="onScroll($event)"
+>
+  <div
+    class="row"
+    [ngClass]="{
+      'justify-content-center': !isMobile,
+      'w-100': !isMobile
+    }"
+  >
+    <div
+      class="lead-icons"
+      [ngClass]="{
+        'col-6': isMobile,
+        'col-3': !isMobile
+      }"
+    >
+      <div style="margin-right: 8px"><a href="#hero">Eltee.Taiwo</a></div>
+    </div>
+    <div
+      class="anchors"
+      *ngIf="!isMobile"
+      [ngClass]="{
+        'col-6': isMobile,
+        'col-3': !isMobile
+      }"
+    >
+      <a class="header__menu-link" href="#skills">SKILLS</a>
+      <a class="header__menu-link" href="#portfolio">PORTFOLIO</a>
+      <a class="header__menu-link" href="#contact">CONTACT</a>
+    </div>
+    <div *ngIf="isMobile" class="col-6" (click)="toggleList()">
+      <img src="https://img.icons8.com/fluent/48/000000/hamburger.png" />
+    </div>
+  </div>
+  <div class="list-item-divider" *ngIf="opened && isMobile">
+    <a class="list-item header__menu-link" (click)="toggleList()" href="#skills"
+      >SKILLS</a
+    >
+    <a
+      class="list-item header__menu-link"
+      (click)="toggleList()"
+      href="#portfolio"
+      >PORTFOLIO</a
+    >
+    <a
+      class="list-item header__menu-link"
+      (click)="toggleList()"
+      href="#pricing"
+      >PRICING</a
+    >
+    <a
+      class="list-item header__menu-link"
+      (click)="toggleList()"
+      href="#contact"
+      >CONTACT</a
+    >
+  </div>
+</nav>

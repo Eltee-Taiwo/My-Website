@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
-  template: `<div>Hello {{value}}</div>`,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  value = 'World';
+
+export class AppComponent implements OnInit {
+  title = "Eltee Taiwo";
+  ngOnInit(): void {
+    AOS.init();
+  }
 }
