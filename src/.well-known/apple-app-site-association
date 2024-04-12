@@ -1,0 +1,10 @@
+{
+    "applinks": {
+        "details": [
+             {
+               "appIDs": [ "4B2QH4R585.com.taiwotech.blackbiz"],
+               "paths": [ "*" ]
+             }
+         ]
+     }
+  }
